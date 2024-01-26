@@ -20,6 +20,9 @@ export const ExerciseUseState = () => {
     }
 
     useEffect(() => {
+
+        // ### THIS WILL SHOW THE AMOUNT OF RERENDERES
+
         console.count("theme Main have re-rendered")
     })
 

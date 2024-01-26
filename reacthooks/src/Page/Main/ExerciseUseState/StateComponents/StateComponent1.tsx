@@ -24,8 +24,10 @@ export const StateComponent1 = () => {
 
     }
     useEffect(() => {
-        console.count("theme 1 have re-rendered");
-       
+
+        // ### THIS WILL SHOW THE AMOUNT OF RERENDERES
+
+        // console.count("theme 1 have re-rendered");
     })
     return (
         <div className="stateComponent1">
