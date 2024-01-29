@@ -23,8 +23,8 @@ export const ExerciseUseState = () => {
 
         // ### THIS WILL SHOW THE AMOUNT OF RERENDERES
 
-        console.count("theme Main have re-rendered")
-    })
+        // console.count("theme Main have re-rendered")
+    }, [themeMain])
 
     const Grid = ({child}: any) => {
         return (

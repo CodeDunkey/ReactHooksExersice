@@ -6,9 +6,9 @@ export const Page = () => {
 
     return(
         <div className='Page'>
-             <Header />
+             {/* <Header /> */}
             <Main />
-            <Footer />         
+            {/* <Footer />          */}
         </div>
     )
 }
