@@ -1,11 +1,11 @@
 import './Main.scss'
 import { ExerciseUseState } from './ExerciseUseState/ExerciseUseState'
-import { ClientApp } from './ExerciseUseEffect/ClientApp/ClientApp'
+import { ExerciseUseEffect } from './ExerciseUseEffect/ExerciseUseEffect'
 export const Main = () => {
     return(
         <div className="main">
             <ExerciseUseState />
-            <ClientApp />
+            <ExerciseUseEffect />
         </div>
     )
 }

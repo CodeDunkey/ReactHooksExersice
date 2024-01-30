@@ -1,3 +1,4 @@
+import './ServerNorth.scss'
 export const ServerNorth = () => {
     
     // content 
@@ -6,7 +7,7 @@ export const ServerNorth = () => {
     // brugeren kan ændre mellem cars og bikes 
 
     return(
-        <div>
+        <div className='serverNorthWrapper'> Server
             
         </div>
     )

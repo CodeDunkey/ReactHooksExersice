@@ -40,7 +40,6 @@ export const ClientApp = () => {
         // the useEffect is running at least ones at initial render
         document.title = `You clicked ${count} times`;
         // Code to run
-        startTimer()
 
         // Optional return cleanup function 
         return ()=>{
@@ -53,9 +52,9 @@ export const ClientApp = () => {
     // and then run your setup function with the new values. After your component is removed from the DOM, 
     //React will run your cleanup function. 
 
-    return (<div className="clientApp" > Hello
-        <button onClick={() => setCount((value) => value + 1)}>Click here. {Math.round(time/1000)} secs since last click</button>
-        <div>{JSON.stringify(data)}</div>
+    return (<div className="clientApp" > Client app
+        {/* <button onClick={() => setCount((value) => value + 1)}>Click here. {Math.round(time/1000)} secs since last click</button> */}
+        {/* <div>{JSON.stringify(data)}</div> */}
     </div>)
 }
 
