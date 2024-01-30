@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import './ClientApp.scss'
-import { useClientAPI } from "./useClientAPI"
+import { useClientAPI } from "./ClientAPI"
 
 export const ClientApp = () => {
     const [count, setCount] = useState(0)

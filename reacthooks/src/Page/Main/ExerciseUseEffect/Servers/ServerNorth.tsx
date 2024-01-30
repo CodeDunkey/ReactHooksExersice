@@ -1,4 +1,6 @@
 import './ServerNorth.scss'
+
+
 export const ServerNorth = () => {
     
     // content 
@@ -8,7 +10,8 @@ export const ServerNorth = () => {
 
     return(
         <div className='serverNorthWrapper'> Server
-            
+            <div className='dataSet'>Data
+            </div>
         </div>
     )
 }
@@ -19,4 +22,11 @@ export const ServerNorth = () => {
 //     "employees": [
 //         "Elves",
 //         "Wizards"
+//     ]
+
+// ,
+//     "siteManager": "sasquatch",
+//     "employees": [
+//         "Chewbacca",
+//         "Cousin Itt"
 //     ]
