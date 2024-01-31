@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react"
 import { clientAPI } from "./ClientAPI"
-export const useJsonNorth = () => {
-    const [jsonNorth, setJsonNorth] = useState()
+export const useJsonSouth = () => {
+    const [jsonSouth, setJsonSouth] = useState()
     
     useEffect(() => {
         // logic inside effects is reactive
         
-        const getJsonNorth = async () => {
-            const jsonN = await clientAPI.getJsonNorth()
-            setJsonNorth(jsonN);
+        const getJsonSouth = async () => {
+            const jsonS = await clientAPI.getJsonSouth()
+            setJsonSouth(jsonS);
         }
-        getJsonNorth();
+        getJsonSouth();
         // the useEffect is running at least ones at initial render
         // Code to run
 
@@ -25,7 +25,7 @@ export const useJsonNorth = () => {
     
 
     return {
-        jsonNorth,
-        setJsonNorth
+        jsonSouth,
+        setJsonSouth,
     }
 }

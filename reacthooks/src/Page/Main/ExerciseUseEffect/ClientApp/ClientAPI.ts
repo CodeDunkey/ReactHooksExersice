@@ -1,27 +1,15 @@
-import { useEffect, useState } from "react";
+// would be a fetch in a real scenario
+import { serverApi } from "../Servers/ServerAPI";
 
-import ServerNorth from "../Servers/ServerNorth.json";
-export const useClientAPI = (options: any) => {
-    const [data, setData] = useState<any>(null);
-   
-    let newData = ServerNorth
-    // console.log(ServerNorth)
+class ClientAPI {
 
+    getJsonNorth = async () => {
+        return serverApi.getJsonNorth();
+    }
 
-
-    useEffect(()=>{
-        setData(newData);
-    }, [data])
-
-    
-    return {
-        data,
+    getJsonSouth = async () => {
+        return serverApi.getJsonSouth();
     }
 }
 
-// useEffect(()=>{
-//     console.log("useFetch useEffect")
-//     fetch(options.url)
-//         .then((response) =>response.json())
-//         .then((json) => setData(json));
-// })
+export const clientAPI = new ClientAPI();
