@@ -1,6 +1,6 @@
 import './Show.scss'
-import { ClientApp } from './ClientApp/ClientApp'
-import { ServerNorth } from './Servers/ServerNorth'
+import { ClientApp } from './Example1/ClientApp/ClientApp'
+import { ServerNorth } from './Example1/Servers/ServerNorth'
 export const ExerciseUseEffect = () => {
 
     // useEffect(() => {
