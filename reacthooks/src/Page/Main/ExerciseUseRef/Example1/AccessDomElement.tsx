@@ -1,15 +1,19 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './AccessDomElement.scss'
-let letTimerId: any = 0;
+
 export const AccessDomElement = () => {
+    // let letTimerId: any; "will in this example be 'undefined'"
     const [textInput, setTextInput] = useState();
     const [seconds, setSecond] = useState(0);
     const render = useRef(0);
     const inputRef = useRef<any>();
     const timerId = useRef<any>()
-    
-    
+
+    useEffect (()=> {
+        // render.current++
+    }, [])
     const handleTextInput = (x: any) => {
+        console.log('x in handleTextInput', x.target.value);
         setTextInput(x.target.value)
         render.current++;
     }
@@ -20,19 +24,22 @@ export const AccessDomElement = () => {
     }
 
     const startTimer = () => {
-        if (!letTimerId) {
-            letTimerId = setInterval(() => {
+        if (!timerId.current) {
+            timerId.current = setInterval(() => {
                 render.current++
                 setSecond(e => e + 1) // or setSecond(e: any => e + 1)
             }, 1000);
         }
-        
     }
 
+    // the example below with "letTimerId" will not work because when the interval runs the,
+    // setSecond triggers a re-render, and after every re-render the letTimerId gets set to the init value which is "undefined",
+    // and then the clearInterval does not know what interval to clear
     const stopTimer = () => {
-        clearInterval(letTimerId); //timerId.current
-        letTimerId = 0; //timerId.current
-        console.log('timerId.current in stopTimer', letTimerId);
+        // clearInterval(letTimerId);
+        
+        clearInterval(timerId.current); //timerId.current
+        timerId.current = 0; //timerId.current
     }
     const resetTimer = () => {
 
@@ -43,27 +50,17 @@ export const AccessDomElement = () => {
 
         }
 
+        
     }
-
-    let num1 = 1;
-    let num2 = 2;
-    num2 = num1;
-    num2 = num2 + 3;
-    console.log(num1);
-    console.log(num2);
-    let array1 = [1, 2, 3];
-    let array2 = array1;
-    array2.push(4);
-    console.log(array1);
-    console.log(array2);
-    console.log('render', render);
-    console.log('letTimerId', letTimerId);
-    console.log('timerId.current', timerId.current);
+    // console.log('render', render);
+    // console.log('letTimerId', letTimerId);
+    // console.log('timerId.current', timerId.current);
     return (
         <div className="accessDomElement">
 
             {/* {below the 'ref' is used to access the dom element} */}
             <input ref={inputRef} value={textInput} onChange={handleTextInput}></input>
+            <p>{textInput}</p>
             <p>Renders: {render.current}</p>
             <button onClick={startTimer}>Start timer</button>
             <button onClick={stopTimer}>Stop timer</button>

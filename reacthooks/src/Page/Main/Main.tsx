@@ -5,8 +5,8 @@ import { ExerciseUseRef } from './ExerciseUseRef/ExerciseUseRef'
 export const Main = () => {
     return(
         <div className="main">
-            <ExerciseUseState />
-            <ExerciseUseEffect />
+            {/* <ExerciseUseState /> */}
+            {/* <ExerciseUseEffect /> */}
             <ExerciseUseRef />
         </div>
     )
