@@ -1,15 +1,18 @@
+import { Example1UseCallback } from "./Exercise1/Example1"
+import './ExerciseUseCallback.scss'
 export const ExerciseUseCallback = () => {
     return (
-        <div></div>
+        <div className="exerciseUseCallbackWrapper">useCallback example
+            <Example1UseCallback />
+        </div>
     )
 }
 
-// common use-cases for useRef:
+// common use-cases for useCallback:
 // To store persistent values that does Not trigger a re-render:
-// #1: Accessing DOM elements
-// #2: Storing previous values
-// #3: Working with external libraries
-// #1:
-// #1:
+// #1: Skipping re-rendering of components
+// #2: Updating state from a memoized callback
+// #3: Preventing an Effect from firing too often
+// #4: Optimizing a custom Hook
 
 // muligt eksempel at prøve: 
