@@ -4,6 +4,7 @@ import { ExerciseUseEffect } from './ExerciseUseEffect/ExerciseUseEffect'
 import { ExerciseUseRef } from './ExerciseUseRef/ExerciseUseRef'
 import { ExerciseUseCallback } from './ExerciseUseCallback/ExerciseUseCallback'
 import { ExerciseUseMemo } from './ExerciseUseMemo/ExerciseUseMemo'
+import { ExerciseUseReducer } from './ExerciseUseReducer/ExerciseUseReducer'
 export const Main = () => {
     return(
         <div className="main">
@@ -12,6 +13,7 @@ export const Main = () => {
             {/* <ExerciseUseRef /> */}
             {/* <ExerciseUseCallback /> */}
             {/* <ExerciseUseMemo /> */}
+            <ExerciseUseReducer />
         </div>
     )
 }
