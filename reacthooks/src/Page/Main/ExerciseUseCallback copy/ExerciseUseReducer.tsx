@@ -1,12 +1,11 @@
-import { Example1WithoutUseCallback } from "./Exercise1/Example1WithoutUseCallback"
-import { Example1WithUseCallback } from "./Exercise1/Example2WithUseCallback"
+
 import './ExerciseUseCallback.scss'
-export const ExerciseUseCallback = () => {
+export const ExerciseUseReducer = () => {
     return (
-        <div className="exerciseUseCallbackWrapper">useCallback example
+        <div className="exerciseUseCallbackWrapper">useReducer example
             <div className="example1Wrapper">
-                <Example1WithoutUseCallback />
-                <Example1WithUseCallback />
+                
+                
             </div>
         </div>
     )

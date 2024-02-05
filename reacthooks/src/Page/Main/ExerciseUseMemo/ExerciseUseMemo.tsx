@@ -1,9 +1,13 @@
-import { Example1UseMemo } from './Example1/Example1'
+import { Example1WithoutUseMemo } from './Example1/Example1WithoutUseMemo'
+import { Example1WithUseMemo } from './Example1/Example1WithUseMemo'
 import './ExerciseUseMemo.scss'
 export const ExerciseUseMemo = () => {
     return (
         <div className="exerciseUseMemoWrapper">useMemo example
-            <Example1UseMemo />
+            <div className="example1Wrapper">
+                <Example1WithoutUseMemo />
+                <Example1WithUseMemo />
+            </div>
         </div>
     )
 }

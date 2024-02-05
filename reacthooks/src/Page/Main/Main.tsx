@@ -11,7 +11,7 @@ export const Main = () => {
             {/* <ExerciseUseEffect /> */}
             {/* <ExerciseUseRef /> */}
             {/* <ExerciseUseCallback /> */}
-            <ExerciseUseMemo />
+            {/* <ExerciseUseMemo /> */}
         </div>
     )
 }
