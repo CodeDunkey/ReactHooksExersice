@@ -1,0 +1,31 @@
+.exercisePureComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color:darkgray;
+    margin: 20px;
+    padding: 10px;
+
+    .example1ParentComponent {
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid blue;
+        // height: 150px;
+        width: 150px;
+        background-color: grey;
+
+        .example1ChildPureComponent {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            // height: 100px;
+            // width: 100px;
+            background-color: lightgrey;
+        }
+    }
+}
