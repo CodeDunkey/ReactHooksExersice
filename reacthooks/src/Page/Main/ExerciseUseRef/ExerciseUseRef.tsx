@@ -31,7 +31,6 @@ export const ExerciseUseRef = () => {
 // #1: Accessing DOM elements
 // #2: Storing previous values
 // #3: Working with external libraries
-// #1:
-// #1:
+
 
 // muligt eksempel at prøve: 

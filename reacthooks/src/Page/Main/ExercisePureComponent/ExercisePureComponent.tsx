@@ -1,5 +1,6 @@
 import './ExercisePureComponent.scss'
 import { Example1ParentComponent } from './Example1/Example1ParentComponent'
+
 export const ExercisePureComponent = () => {
     return (
         <div className='exercisePureComponent'>Exercise PureComponent
@@ -9,5 +10,7 @@ export const ExercisePureComponent = () => {
 }
 
 // In example 1, there must be a prant and a child component. The parent component must have a button that sets a state that triggers
-// a re-render. But the child component must NEVER re-render.
+// a re-render. But the child component must NEVER re-render if 
+// #1: the parent component re-render.
+// #2: a prop is passed trough
 // first the example must be made without a prop to the child. Second the example must be made with a prop to the child.

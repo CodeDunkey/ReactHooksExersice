@@ -3,9 +3,7 @@ import './ExerciseUseContext.scss'
 export const ExerciseUseContext = () => {
     return (
         <div className="exerciseUseContextWrapper">useContext example
-            <div className="example1Wrapper">
-               <Example1WithUseContext />
-            </div>
+            <Example1WithUseContext />
         </div>
     )
 }
@@ -18,5 +16,5 @@ export const ExerciseUseContext = () => {
 // #4: Overriding context for a part of the tree
 // #5: Optimizing re-renders when passing objects and functions
 
-// muligt eksempel at prøve: 
+// muligt eksempel at prøve:
 // Example1: passing data without "prop-drilling".
