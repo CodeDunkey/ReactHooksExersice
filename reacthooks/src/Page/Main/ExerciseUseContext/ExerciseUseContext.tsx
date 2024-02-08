@@ -1,4 +1,4 @@
-import { Example1WithUseContext } from './Exercise1/Example1WithUseContext'
+import { Example1WithUseContext } from './Exercise1/Example1ParentComponent'
 import './ExerciseUseContext.scss'
 export const ExerciseUseContext = () => {
     return (

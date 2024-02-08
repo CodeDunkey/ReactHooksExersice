@@ -7,24 +7,21 @@ import { PropsForFunction } from "./Example1Types";
 //     )
 // })
 // 
-export const Example1ChildPureFunctionComponent = memo(({ propObject, propValue }: { propObject: PropsForFunction, propValue: string }) => {
 
-    const [theme, setTheme] = useState('white')
-    const [theme2, setTheme2] = useState<string>('black')
-    // 
-    console.log('propObject', propObject);
+interface Example1ChildPureFunctionComponentProps {
+    myObj: { a: number, b: string};
+    myCallback: () => void;
+}
+
+export const Example1ChildPureFunctionComponent = memo(({ myObj, myCallback }: Example1ChildPureFunctionComponentProps) => {
+     
+    console.log('myObjt', myObj);
     console.log('child render'); // , new Date().toLocaleTimeString()
-    const changeTheme = () => {
-        setTheme(theme === 'white' ? 'black' : 'white');
-        setTheme2(theme2 === 'black' ? 'white' : 'black');
-    }
     return (
-        <div className="example1ChildPureComponent" style={{ backgroundColor: theme, color: theme2 }}>Child Pure Function Component
-            <p>passing an object: {propObject.myObj.a}</p>
-            <p>passing an object: {propObject.myObj.b}</p>
-            <p>passing a primitive value: {propValue}</p>
-            <button onClick={() => changeTheme()}>Change theme</button>
-            <button onClick={() => propObject.myObj.c()}>callback function</button>
+        <div className="example1ChildPureComponent">Child Pure Function Component
+            <p>passing an object: {myObj.a}</p>
+            <p>passing an object: {myObj.b}</p>
+            <button onClick={myCallback}>callback function</button>
             {/* <MemoFunction /> */}
 
         </div>

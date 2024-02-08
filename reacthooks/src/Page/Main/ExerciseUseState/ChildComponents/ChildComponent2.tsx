@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import './StateComponent2.scss'
+import './ChildComponent.scss'
 export const StateComponent2 = () => {
     const [theme2, setTheme2] = useState("")
 
@@ -21,7 +21,7 @@ export const StateComponent2 = () => {
 
         // ### THIS WILL SHOW THE AMOUNT OF RERENDERES
 
-        // console.count("theme 2 have re-rendered")
+        console.count("theme 2 have re-rendered")
     })
     return (
         <div className="stateComponent2">

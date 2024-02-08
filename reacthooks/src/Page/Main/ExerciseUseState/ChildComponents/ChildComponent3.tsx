@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react"
-import './StateComponent3.scss'
-export const StateComponent3 = () => {
+import { useState, useEffect, useRef } from "react"
+import './ChildComponent.scss'
+export const StateComponent3 = ({prop}: {prop: number}) => {
     const [theme3, setTheme3] = useState("")
+    const count = useRef(0)
 
     const changeTheme = () => {
         if (theme3 === "") {
@@ -20,11 +21,12 @@ export const StateComponent3 = () => {
             setTheme3("")
         }
     }
+    const counter = console.count
     useEffect(() => {
-
+        prop++;
         // ### THIS WILL SHOW THE AMOUNT OF RERENDERES
-
-        // console.count("theme 3 have re-rendered")
+        
+        console.count("theme 3 have re-rendered")
     })
     return (
         <div className="stateComponent3">
@@ -32,6 +34,7 @@ export const StateComponent3 = () => {
             <div className='gridSquare3' style={{ backgroundColor: theme3 }}>3</div>
             <div className='gridSquare6' style={{ backgroundColor: theme3 }}>6</div>
             <div className='gridSquare9' style={{ backgroundColor: theme3 }}>9</div>
+            {prop}
         </div>
     )
 }

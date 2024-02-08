@@ -16,7 +16,7 @@ export const Main = () => {
             {/* <ExerciseUseCallback /> */}
             {/* <ExerciseUseMemo /> */}
             {/* <ExerciseUseReducer /> */}
-            <ExerciseUseContext />
+            {/* <ExerciseUseContext /> */}
             {/* <ExercisePureComponent /> */}
         </div>
     )
